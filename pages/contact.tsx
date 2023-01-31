@@ -1,0 +1,241 @@
+import Container from 'components/Container';
+import React, { useState } from "react";
+
+
+
+export default function Contact() {
+    const [fullname, setFullname] = useState("");
+    const [email, setEmail] = useState("");
+    const [subject, setSubject] = useState("");
+    const [message, setMessage] = useState("");
+  
+    //   Form validation
+    const [errors, setErrors] = useState({});
+  
+    //   Setting button text
+    const [buttonText, setButtonText] = useState("Send");
+  
+    const [showSuccessMessage, setShowSuccessMessage] = useState(false);
+    const [showFailureMessage, setShowFailureMessage] = useState(false);
+  
+    const handleValidation = () => {
+      let tempErrors = {};
+      let isValid = true;
+  
+      if (fullname.length <= 0) {
+        tempErrors["fullname"] = true;
+        isValid = false;
+      }
+      if (email.length <= 0) {
+        tempErrors["email"] = true;
+        isValid = false;
+      }
+      if (subject.length <= 0) {
+        tempErrors["subject"] = true;
+        isValid = false;
+      }
+      if (message.length <= 0) {
+        tempErrors["message"] = true;
+        isValid = false;
+      }
+  
+      setErrors({ ...tempErrors });
+      console.log("errors", errors);
+      return isValid;
+    };
+  
+    //   const [form, setForm] = useState(false);
+  
+    const handleSubmit = async (e) => {
+      e.preventDefault();
+  
+      let isValidForm = handleValidation();
+  
+      if (isValidForm) {
+        setButtonText("Sending");
+        const res = await fetch("/api/sendgrid", {
+          body: JSON.stringify({
+            email: email,
+            fullname: fullname,
+            subject: subject,
+            message: message,
+          }),
+          headers: {
+            "Content-Type": "application/json",
+            
+          },
+          method: "POST",
+        });
+  
+        const { error } = await res.json();
+        if (error) {
+          console.log(error);
+          setShowSuccessMessage(false);
+          setShowFailureMessage(true);
+          setButtonText("Send");
+  
+          // Reset form fields
+          setFullname("");
+          setEmail("");
+          setMessage("");
+          setSubject("");
+          return;
+        }
+        setShowSuccessMessage(true);
+        setShowFailureMessage(false);
+        setButtonText("Send");
+        // Reset form fields
+        setFullname("");
+        setEmail("");
+        setMessage("");
+        setSubject("");
+      }
+      console.log(fullname, email, subject, message);
+    };
+
+  return (
+    <Container
+      title="Contact | Larry Chiem"
+      description="Contact Me if you Are Interested in Hiring!"
+    >
+      
+      <div className="flex items-start justify-left  mx-auto ">
+<div className="relative flex items-top justify-center min-h-10 mb-5 bg-white dark:bg-gray-900 sm:items-center sm:pt-0">
+        <div className="max-w-6xl mx-auto sm:px-6 lg:px-8">
+            <div className="mt-8 overflow-hidden">
+                <div className="grid grid-cols-1 md:grid-cols-2">
+                    <div className="p-6 mr-2 bg-gray-100 dark:bg-gray-800 sm:rounded-lg">
+                        <h1 className="text-4xl sm:text-5xl mt-5 text-gray-800 dark:text-white font-extrabold tracking-tight">
+                            Reach Out! 👋
+                        </h1>
+                        <p className="text-normal text-lg sm:text-2xl font-medium text-gray-600 dark:text-gray-400 mt-2">
+                            Fill in the form to start a conversation
+                        </p>
+
+                        <div className="flex items-center mt-8 text-gray-600 dark:text-gray-400">
+                            <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" className="w-8 h-8 text-gray-500">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                            </svg>
+                            <div className="ml-4 text-md tracking-wide font-semibold w-40">
+                                San Francisco, CA
+                            </div>
+                        </div>
+
+                        <div className="flex items-center mt-4 text-gray-600 dark:text-gray-400">
+                            <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" className="w-8 h-8 text-gray-500">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                            </svg>
+                            <div className="ml-4 text-md tracking-wide font-semibold w-40">
+                                +1 (925) 478-9236
+                            </div>
+                        </div>
+
+                        <div className="flex items-center mt-2 text-gray-600 dark:text-gray-400">
+                            <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" className="w-8 h-8 text-gray-500">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                            </svg>
+                            <div className="ml-4 text-md tracking-wide font-semibold w-40">
+                                larrychiem@gmail.com
+                            </div>
+                        </div>
+                    </div>
+
+                    <form onSubmit={handleSubmit} className="p-6 flex flex-col justify-center">
+                        <div className="flex flex-col">
+                        <label htmlFor="fullname" className="hidden">Full Name</label>
+                            <input
+            type="text"
+            value={fullname}
+            onChange={(e) => {
+              setFullname(e.target.value);
+            }}
+            name="fullname"
+            placeholder="Full Name"
+            className="w-100 mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-400 dark:border-gray-700 text-gray-800 dark:text-white font-semibold focus:border-indigo-500 focus:outline-none"
+          />
+          {errors?.fullname && (
+            <p className="text-red-500">Full Name cannot be empty.</p>
+          )}
+                        </div>
+
+                        <div className="flex flex-col mt-2">
+                            <label htmlFor="email" className="hidden">Email</label>
+                            <input
+            placeholder="Email" 
+            type="email"
+            name="email"
+            value={email}
+            onChange={(e) => {
+              setEmail(e.target.value);
+            }}
+            className="w-100 mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 dark:text-white border border-gray-400 dark:border-gray-700 text-gray-800 font-semibold focus:border-indigo-500 focus:outline-none"
+          />
+          {errors?.email && (
+            <p className="text-red-500">E-Mail cannot be empty.</p>
+          )}
+
+                        </div>
+                        <div className="flex flex-col mt-2">
+                            <label htmlFor="subject" className="hidden">subject</label>
+       
+<input
+            placeholder="Subject"
+            type="text"
+            name="subject"
+            value={subject}
+            onChange={(e) => {
+              setSubject(e.target.value);
+            }}
+            className="w-100 mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 dark:text-white border border-gray-400 dark:border-gray-700 text-gray-800 font-semibold focus:border-indigo-500 focus:outline-none"
+          />
+          {errors?.subject && (
+            <p className="text-red-500">Subject cannot be empty.</p>
+          )}
+
+                        </div>
+
+                        <div className="flex flex-col mt-2">
+                            <label htmlFor="message" className="hidden">Message</label>
+<textarea
+            placeholder='Write a Message...'
+            name="message"
+            value={message}
+            onChange={(e) => {
+              setMessage(e.target.value);
+            }}
+            className="w-100 mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 dark:text-white border border-gray-400 dark:border-gray-700 text-gray-800 font-semibold focus:border-indigo-500 focus:outline-none"
+          ></textarea>
+          {errors?.message && (
+            <p className="text-red-500">Message Body cannot be empty.</p>
+          )}
+
+                        </div>
+                        <div className="flex flex-col mt-2">
+                        <button type="submit" className="md:w-32 bg-sky-600 hover:bg-blue-dark text-white font-bold py-3 px-6 rounded-lg mt-3 hover:bg-sky-500 transition ease-in-out duration-300">
+                            {buttonText}
+              
+                        </button>
+
+                        {showSuccessMessage && (
+              <p className="text-green-500 font-semibold text-sm my-2">
+                Thank You! Your Message has been delivered.
+              </p>
+            )}
+            {showFailureMessage && (
+              <p className="text-red-500">
+                Oops! Something went wrong, please try again.
+              </p>
+            )}
+            
+          </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    </Container>
+  );
+}
