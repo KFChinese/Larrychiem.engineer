@@ -1,6 +1,9 @@
+
 # Welcome to larrychiem.engineer's Portfolio! 
 
-Hello,
+Hi,
+
+You are currently looking at v1 of [https://larrychiem.engineer](https://larrychiem.engineer), and will be building out v2 soon!
 
 This Website is currently online [Right Now!](https://larrychiem.engineer)
 
