@@ -1,17 +1,35 @@
-
-# Welcome to larrychiem.engineer's Portfolio! 
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fkfchinese%2Flarrychiem.engineer)
+# Welcome to Larry Chiem's Portfolio! 
 
 Hi,
+You have reached my GitHub for My Portfolio.
 
-You are currently looking at v1 of [https://larrychiem.engineer](https://larrychiem.engineer), and will be building out v2 soon!
+This was built with Next.JS (TypeScript), and It's currently viewable with pressing Production on the Right.
+This uses TailwindCSS and more features that are with Next.JS.
+This is currently its v2 itteration for my portfolio.
 
-This Website is currently online [Right Now!](https://larrychiem.engineer)
-
-([Alternative Link](https://kfchinese.github.io/Larrychiem.engineer/)) 
+There's also v1 below to see the difference.
 
 
-Using BootStrap Studio 5, I had made a portfolio to represent all my projects that are completed and currently in development. 
 
-## Created with [BootStrap Studio 5](https://bootstrapstudio.io/)
+## Running this Project
+You can Either deploy directly with Deploying with Vercel -> [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fkfchinese%2Flarrychiem.engineer) 
 
-This website is exclusively built on BootStrap Studio 5 with the BootStrap framework.
+or Running Locally by using:
+
+This application requires Node.js v16.13+.
+
+```bash
+git clone https://github.com/kfchinese/larrychiem.engineer.git
+cd larrychiem.engineer
+npm install --force
+npm build
+npm start dev
+```
+
+Create a `.env` file similar to [`.env.example`](https://github.com/leerob/leerob.io/blob/main/.env.example).
+
+
+## Archived v1 
+You are currently looking at v1 of [https://larrychiem.engineer](https://kfchinese.github.io/Larrychiem.engineer-v1-Archive/)
+and source code can be found [Here](https://github.com/KFChinese/Larrychiem.engineer-v1-Archive).
