@@ -24,7 +24,7 @@ export default function Resume() {
 </g>
 </svg></p>
   <div className="mb-8 prose dark:prose-dark leading-6">
-  <iframe className="responsive-iframe" src="public/Larry-Chiem_Resume.pdf" width="100%" height="500px" >
+  <iframe className="responsive-iframe" src="https://kfchinese.github.io/Resume/Larry-Chiem_Resume.pdf" width="100%" height="500px" >
     </iframe>
     <div className="prose dark:prose-dark w-full justify-center">
     <a 
