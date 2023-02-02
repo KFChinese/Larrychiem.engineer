@@ -1,7 +1,11 @@
 
 # Welcome to Larry Chiem's Portfolio! 
 
-![](https://raw.githubusercontent.com/KFChinese/Larrychiem.engineer/master/public/Screen%20Shot%202023-02-02%20at%202.32.14%20PM.png)
+---
+
+<div align='center'>
+<img src="https://github.com/KFChinese/Larrychiem.engineer/blob/master/public/BG.png?raw=true"  width="450" height="450">
+</div>
 
 ---
 
