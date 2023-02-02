@@ -1,7 +1,12 @@
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fkfchinese%2Flarrychiem.engineer)
+
 # Welcome to Larry Chiem's Portfolio! 
 
+![](https://raw.githubusercontent.com/KFChinese/Larrychiem.engineer/master/public/Screen%20Shot%202023-02-02%20at%202.32.14%20PM.png)
+
+---
+
 Hi,
+
 You have reached my GitHub for My Portfolio.
 
 This was built with Next.JS (TypeScript), and It's currently viewable with pressing Production on the Right.
@@ -13,7 +18,9 @@ There's also v1 below to see the difference.
 
 
 ## Running this Project
-You can Either deploy directly with Deploying with Vercel -> [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fkfchinese%2Flarrychiem.engineer) 
+You can Either deploy directly with Deploying with Vercel:
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fkfchinese%2Flarrychiem.engineer) 
 
 or Running Locally by using:
 
