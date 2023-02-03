@@ -38,8 +38,9 @@ export default function Container(props) {
   const router = useRouter();
   const meta = {
     title: 'Larry Chiem',
-    description: `Full Stack Engineer, JavaScript enthusiast, and course creator.`,
+    description: `A Full Stack Engineer in the Bay Area.`,
     type: 'website',
+    image: 'https://raw.githubusercontent.com/KFChinese/Larrychiem.engineer/master/public/static/LC.png',
     ...customMeta
   };
 
