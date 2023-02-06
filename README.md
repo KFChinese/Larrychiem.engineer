@@ -42,5 +42,6 @@ Create a `.env` file similar to [`.env.example`](https://github.com/leerob/leero
 
 
 ## Archived v1 
-You are currently looking at v1 of [https://larrychiem.engineer](https://kfchinese.github.io/Larrychiem.engineer-v1-Archive/)
-and source code can be found [Here](https://github.com/KFChinese/Larrychiem.engineer-v1-Archive).
+This is my archived v1's website, using BootStrap Studio: [https://larrychiem.engineer](https://kfchinese.github.io/Larrychiem.engineer-v1-Archive/).
+
+Source code can be found [Here](https://github.com/KFChinese/Larrychiem.engineer-v1-Archive).
