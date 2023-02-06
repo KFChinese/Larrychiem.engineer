@@ -21,7 +21,7 @@ export default function Home() {
             <ParallaxProvider>
     <ParallaxBanner
       
-      style={{ aspectRatio: '2.75/ 1' }}
+      className="aspect-[3/2] md:aspect-[2.75/1]"
     >
 
 
@@ -35,7 +35,7 @@ export default function Home() {
       <ParallaxBannerLayer>
     <div className="flex flex-row items-start">
             <div className="flex flex-col pr-8">
-              <h1 className="font-bold text-center text-3xl md:text-5xl tracking-tight  md:mt-10 lg:mt-10 sm:mt-10 ml-5 mb-1  text-white dark:text-white">
+              <h1 className="font-bold text-center text-3xl md:text-5xl tracking-tight  mt-10 md:mt-10 lg:mt-10 sm:mt-10 ml-5 mb-1  text-white dark:text-white">
                 Larry Chiem
               </h1>
               <h2 className="text-gray-200 text-center dark:text-gray-200 ml-5 mb-4">
@@ -49,7 +49,7 @@ export default function Home() {
      
 </Link>
               </h2>
-              <p className="text-gray-200 text-center dark:text-gray-200 ml-5 mb-5">
+              <p className=" text-gray-200 text-[14px] md:text-l text-center dark:text-gray-200 ml-5 mb-5">
                 A Full-Stack Engineer in the Bay Area. <br></br> Developing Solutions and Building the Future With Innovative Technologies. 
               </p>
             </div>
