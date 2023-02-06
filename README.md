@@ -38,7 +38,7 @@ npm build
 npm start dev
 ```
 
-Create a `.env` file similar to [`.env.example`](https://github.com/leerob/leerob.io/blob/main/.env.example).
+Create a `.env` file similar to [`.env.example`](https://github.com/kfchinese/larrychiem.engineer/blob/master/.env.example).
 
 
 ## Archived v1 
