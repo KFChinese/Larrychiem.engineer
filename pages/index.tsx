@@ -21,7 +21,7 @@ export default function Home() {
             <ParallaxProvider>
     <ParallaxBanner
       
-      className="aspect-[3/2] md:aspect-[2.75/1]"
+      className="aspect-[3/2] sm:aspect-[2.75/1] md:aspect-[2.75/1]"
     >
 
 
