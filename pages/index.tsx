@@ -41,7 +41,7 @@ export default function Home() {
               <h2 className="text-gray-200 text-center dark:text-gray-200 ml-5 mb-4">
                 IT Engineer III at{' '}
               
-                <Link href="https://www.ringcentral.com"itemProp="item">
+                <Link target="_blank" rel="noopener noreferrer" href="https://www.ringcentral.com" itemProp="item">
     
        <span itemProp="name" className="font-semibold">
        RingCentral
@@ -79,7 +79,7 @@ export default function Home() {
           <div className="flex gap-6 m-auto text-center  flex-col text-center md:flex-row">
             <ProjectCard
               title="FedEx & FedEx RMA Automation"
-              slug=""
+              slug="https://github.com"
               gradient="animate-text from-[#4d148c] to-[#ff6200]"
             />
             <ProjectCard
@@ -94,7 +94,7 @@ export default function Home() {
             />
           </div>
           <Link
-            href="/blog"
+            href="/projects"
             className="flex items-center mt-8 text-gray-600 dark:text-gray-400 leading-7 rounded-lg hover:text-gray-800 dark:hover:text-gray-200 transition-all h-6"
           >
             <>

@@ -7,7 +7,9 @@ export default function ProjectCard({ title, slug, gradient }) {
 
   return (
     <Link
-      href={`/blog/${slug}`}
+    target="_blank"
+    rel="noopener noreferrer"
+      href={slug}
       className={cn(
         'transform hover:scale-[1.01] transition-all',
         'rounded-xl w-full md:w-1/3 bg-gradient-to-r p-1',
