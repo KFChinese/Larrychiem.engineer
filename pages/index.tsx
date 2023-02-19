@@ -26,7 +26,7 @@ export default function Home() {
 
 
       <ParallaxBannerLayer
-        image="https://raw.githubusercontent.com/KFChinese/Larrychiem.engineer/master/public/background.webp"
+        image="./background.webp"
         speed={-20}
       >
 
