@@ -16,7 +16,7 @@
     "@sanity/webhook": "^2.0.0",
     "@sendgrid/mail": "^7.7.0",
     "@tailwindcss/typography": "0.5.7",
-    "aws-sdk": "^2.1304.0",
+    "aws-sdk": "^2.1410.0",
     "classnames": "^2.3.2",
     "date-fns": "2.29.3",
     "mailcomposer": "^4.0.2",

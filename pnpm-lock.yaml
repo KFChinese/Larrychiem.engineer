@@ -30,7 +30,7 @@ dependencies:
     specifier: 0.5.7
     version: 0.5.7(tailwindcss@3.2.1)
   aws-sdk:
-    specifier: ^2.1304.0
+    specifier: ^2.1410.0
     version: 2.1410.0
   classnames:
     specifier: ^2.3.2
