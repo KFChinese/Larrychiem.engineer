@@ -1,3 +1,5 @@
+/* styles/mobile-menu.module.css */
+
 .burger {
   transition: opacity 300ms ease;
   border: 0;
@@ -5,6 +7,8 @@
   width: 40px;
   height: 40px;
   position: relative;
+  /* Ensure burger is clickable */
+  z-index: 1001; /* Higher than the menu when closed */
 }
 
 .burger svg {
@@ -21,6 +25,7 @@
 }
 
 .menu {
+  /* Base styles (CLOSED STATE) */
   padding: 0 28px 0 4px;
   margin: 0;
   padding-top: 24px;
@@ -29,34 +34,54 @@
   z-index: 1000;
   opacity: 0;
   left: 0;
-  transition: opacity 300ms ease, transform 300ms ease;
+  /* Add transform for slide effect if desired, or just use opacity */
+  transform: translateY(-10px); /* Example: slightly up */
+  transition: opacity 300ms ease-out, transform 300ms ease-out;
+  pointer-events: none; /* Important: prevent interaction when closed */
 }
+
+.menuOpen {
+  /* Styles when menu is OPEN */
+  opacity: 1;
+  transform: translateY(0); /* Slide down to original position */
+  pointer-events: auto; /* Allow interaction */
+}
+
 
 .menu li {
+  /* Base styles for list items (related to CLOSED state) */
   transform: translateX(-16px);
   opacity: 0;
-  transition: opacity 300ms ease, transform 300ms ease, width 300ms ease,
-    border-color 300ms ease;
-  width: 0px;
+  transition: opacity 300ms ease, transform 300ms ease;
   white-space: nowrap;
+   /* Remove width transition, control visibility mainly with opacity/transform */
 }
 
-.menuRendered {
-  opacity: 1;
-}
-
-.menuRendered li {
-  border: 1px solid #e5e7eb; /* border-gray-200 */
-  border-color: #4b5563; /* dark:border-gray-600 */
-  width: 100%; /* w-full */
+.menuOpen li {
+   /* Styles for list items when menu is OPEN */
+  /* Apply border when menu is open */
+  border-bottom: 1px solid #e5e7eb; /* light mode border */
+  @media (prefers-color-scheme: dark) {
+     border-bottom-color: #4b5563; /* dark mode border */
+  }
   transform: translateX(0);
   opacity: 1;
+  /* Add staggered delay if desired using inline styles in the component */
 }
+
+/* Remove .menuRendered classes as they are replaced by .menuOpen */
+/* .menuRendered { ... } */
+/* .menuRendered li { ... } */
+
 
 .menu > * + * {
-  margin-top: 24px;
+  /* Keep margin between list items, but ensure it only applies when visible */
+  /* This selector should still work fine */
+   margin-top: 24px;
 }
 
+/* Keep keyframes if used elsewhere, otherwise remove */
+/*
 @keyframes grow {
   0% {
     height: 0px;
@@ -65,3 +90,4 @@
     height: 24px;
   }
 }
+*/
