@@ -13,8 +13,18 @@ module.exports = {
     extend: {
       colors: {
         gray: {
-          ...colors.gray,
-          0: '#ffffff', // keep if you need gray.0
+          0: '#ffffff',
+          50: colors.gray[50],   // 👈 Add this line
+          100: colors.gray[100],
+          200: colors.gray[200],
+          300: colors.gray[300],
+          400: colors.gray[400],
+          500: colors.gray[500],
+          600: colors.gray[600],
+          700: colors.gray[700],
+          800: colors.gray[800],
+          900: colors.gray[900],
+          950: colors.gray[950],
         },
         green: {
           701: '#148a06',
@@ -22,6 +32,7 @@ module.exports = {
         },
         'blue-opaque': 'rgb(13 42 148 / 18%)'
       },
+      
       fontFamily: {
         sans: ['Inter', ...fontFamily.sans],
       },
