@@ -8,6 +8,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "framer-motion": "10.12.16",
     "@aws-sdk/client-ses": "^3.363.0",
     "@next/font": "13.0.2",
     "@nextui-org/react": "^2.6.11",
