@@ -12,27 +12,16 @@ module.exports = {
   ],
   darkMode: 'class',
   theme: {
+      theme: {
     extend: {
       colors: {
-        gray: { // Extend the gray colors
-          0: '#ffffff',
-          50: colors.gray[50],   // <--- ADD THIS LINE
-          100: colors.gray[100],
-          200: colors.gray[200],
-          300: colors.gray[300],
-          400: colors.gray[400],
-          500: colors.gray[500],
-          600: colors.gray[600],
-          700: colors.gray[700],
-          800: colors.gray[800],
-          900: colors.gray[900],
-          950: colors.gray[950],
-        },
+        gray: colors.gray, // ✅ Keep full gray scale
         green: {
           701: '#148a06',
           801: '#106205',
         },
         'blue-opaque': 'rgb(13 42 148 / 18%)'
+      },
       },
       fontFamily: {
         sans: ['Inter', ...fontFamily.sans],
