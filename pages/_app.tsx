@@ -2,9 +2,14 @@ import 'styles/global.css';
 
 import { ThemeProvider } from 'next-themes';
 
-import { Inter } from '@next/font/google';
+import { Inter } from 'next/font/google';
 
-import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
+const inter = Inter({
+  subsets: ['latin'], // ✅ Add this line
+  preload: true,      // Optional but good to be explicit
+});
+
+
 
 
 const interVariable = Inter();
