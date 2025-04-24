@@ -24,24 +24,17 @@ module.exports = {
       
       colors: {
         'blue-opaque': 'rgb(13 42 148 / 18%)',
+        ...colors, // ← This brings in Tailwind's full palette (like bg-gray-50)
         gray: {
-          0: '#fff',
-          100: '#fafafa',
-          200: '#eaeaea',
-          300: '#999999',
-          400: '#888888',
-          500: '#666666',
-          600: '#444444',
-          700: '#333333',
-          800: '#222222',
-          900: '#111111'
+          ...colors.gray, // ← Brings back all gray shades (50, 100, etc.)
+          0: '#fff',       // ← Add or override specific ones if needed
+          701: '#333333'
         },
-        green:{
-          701:'#148a06',
-          801:'#106205'
+        green: {
+          701: '#148a06',
+          801: '#106205'
         }
-
-      },
+      },      
       fontFamily: {
         sans: ['Inter', ...fontFamily.sans]
       },
