@@ -168,7 +168,28 @@ pre {
 }
 
 .rehype-code-title {
-  @apply px-5 py-3 font-mono text-sm font-bold text-gray-800 bg-gray-200 border border-b-0 border-gray-200 rounded-t-lg dark:text-gray-200 dark:border-gray-700 dark:bg-gray-800;
+  padding-left: 1.25rem; /* px-5 */
+  padding-right: 1.25rem; /* px-5 */
+  padding-top: 0.75rem; /* py-3 */
+  padding-bottom: 0.75rem; /* py-3 */
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; /* font-mono */
+  font-size: 0.875rem; /* text-sm */
+  font-weight: 700; /* font-bold */
+  color: #1f2937; /* text-gray-800 */
+  background-color: #e5e7eb; /* bg-gray-200 */
+  border-width: 1px; /* border */
+  border-style: solid;
+  border-color: #e5e7eb; /* border-gray-200 */
+  border-bottom-width: 0; /* border-b-0 */
+  border-radius: 0.5rem 0.5rem 0 0; /* rounded-t-lg */
+}
+
+@media (prefers-color-scheme: dark) {
+  .rehype-code-title {
+    color: #e5e7eb; /* dark:text-gray-200 */
+    border-color: #374151; /* dark:border-gray-700 */
+    background-color: #1f2937; /* dark:bg-gray-800 */
+  }
 }
 
 .rehype-code-title + pre {
