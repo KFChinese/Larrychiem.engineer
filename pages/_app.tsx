@@ -1,29 +1,21 @@
 import 'styles/global.css';
-
 import { ThemeProvider } from 'next-themes';
+import { Inter } from 'next/font/google';
 
-import { Inter } from '@next/font/google';
-
-import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
-
-
-const interVariable = Inter();
+const inter = Inter({
+  subsets: ['latin'], // ✅ required
+  preload: true,      // optional, true by default
+});
 
 export default function App({
   Component,
   pageProps: { session, ...pageProps }
 }) {
   return (
- 
-      <ThemeProvider attribute="class">
-        <main className={interVariable.className}>
-          <Component {...pageProps} />
-        
-        </main>
-
-      </ThemeProvider>
-      
-      
-
+    <ThemeProvider attribute="class">
+      <main className={inter.className}> {/* ✅ use the right one */}
+        <Component {...pageProps} />
+      </main>
+    </ThemeProvider>
   );
 }
