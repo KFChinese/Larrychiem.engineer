@@ -33,7 +33,7 @@ html {
 }
 
 .skip-nav {
-  /* @apply absolute px-4 py-3 transition-transform duration-200 transform -translate-y-12 -left-1/4 focus:top-4 focus:translate-y-3 -top-8; */ /* Temporarily comment out due to px-4 error */
+  /* @apply absolute px-4 py-3 transition-transform duration-200 transform -translate-y-12 -left-1/4 focus:top-4 focus:translate-y-3 -top-8; */ /* Already commented */
 }
 
 #skip {
@@ -43,11 +43,11 @@ html {
 @supports not (backdrop-filter: none) {
   .sticky-nav {
     backdrop-filter: none;
-    @apply bg-opacity-100; /* Keep this, likely fine */
+    /* @apply bg-opacity-100; */ /* Already commented */
   }
 }
 
-/* === Start Typography Plugin Related - Comment out === */
+/* === Start Typography Plugin Related - Already Commented === */
 /*
 .prose .anchor {
   @apply absolute invisible no-underline;
@@ -78,11 +78,11 @@ html {
 */
 /* === End Typography Plugin Related === */
 
-.prose pre { /* Selector still exists, but remove the @apply */
-  /* @apply border border-gray-200 bg-gray-50 dark:border-gray-700 dark:bg-gray-900; */ /* Keep commented */
+.prose pre {
+  /* @apply border border-gray-200 bg-gray-50 dark:border-gray-700 dark:bg-gray-900; */ /* Already commented */
 }
 
-/* === Start Typography Plugin Related - Comment out === */
+/* === Start Typography Plugin Related - Already Commented === */
 /*
 .prose code {
   @apply text-gray-800 dark:text-gray-200 px-1 py-0.5 border border-gray-100 dark:border-gray-800 rounded-lg bg-gray-100 dark:bg-gray-900;
@@ -94,12 +94,10 @@ html {
 }
 
 .prose img {
-  /* Don't apply styles to next/image */
 /*  @apply m-0;
 }
 
 .prose > :first-child {
-  /* Override removing top margin, causing layout shift */
 /*  margin-top: 1.25em !important;
   margin-bottom: 1.25em !important;
 }
@@ -107,16 +105,16 @@ html {
 /* === End Typography Plugin Related === */
 
 
-/* === Keep Token/Highlighting Styles (Probably OK) === */
+/* === Start Token/Highlighting Styles - Comment out @apply === */
 .token.comment,
 .token.prolog,
 .token.doctype,
 .token.cdata {
-  @apply text-gray-700 dark:text-gray-300;
+  /* @apply text-gray-700 dark:text-gray-300; */
 }
 
 .token.punctuation {
-  @apply text-gray-700 dark:text-gray-300;
+  /* @apply text-gray-700 dark:text-gray-300; */
 }
 
 .token.property,
@@ -126,7 +124,7 @@ html {
 .token.constant,
 .token.symbol,
 .token.deleted {
-  @apply text-green-500;
+  /* @apply text-green-500; */
 }
 
 .token.selector,
@@ -135,7 +133,7 @@ html {
 .token.char,
 .token.builtin,
 .token.inserted {
-  @apply text-purple-500;
+  /* @apply text-purple-500; */
 }
 
 .token.operator,
@@ -143,29 +141,29 @@ html {
 .token.url,
 .language-css .token.string,
 .style .token.string {
-  @apply text-yellow-500;
+  /* @apply text-yellow-500; */
 }
 
 .token.atrule,
 .token.attr-value,
 .token.keyword {
-  @apply text-blue-500;
+  /* @apply text-blue-500; */
 }
 
 .token.function,
 .token.class-name {
-  @apply text-pink-500;
+  /* @apply text-pink-500; */
 }
 
 .token.regex,
 .token.important,
 .token.variable {
-  @apply text-yellow-500;
+  /* @apply text-yellow-500; */
 }
 
 code[class*='language-'],
 pre[class*='language-'] {
-  @apply text-gray-800 dark:text-gray-50;
+  /* @apply text-gray-800 dark:text-gray-50; */
 }
 /* === End Token/Highlighting Styles === */
 
@@ -205,11 +203,11 @@ pre {
 }
 
 .rehype-code-title + pre {
-  @apply mt-0 rounded-t-none; /* Keep this, likely fine */
+  /* @apply mt-0 rounded-t-none; */
 }
 
 .highlight-line {
- /* @apply block px-4 -mx-4 bg-gray-100 border-l-4 border-blue-500 dark:bg-gray-800; */ /* Temporarily comment out due to px-4 error */
+ /* @apply block px-4 -mx-4 bg-gray-100 border-l-4 border-blue-500 dark:bg-gray-800; */ /* Already commented */
 }
 
 /* Remove Safari input shadow on mobile */
@@ -221,18 +219,18 @@ input[type='email'] {
 }
 
 .metric-card > a {
-  @apply no-underline; /* Keep this, likely fine */
+  /* @apply no-underline; */
 }
 
 .metric-card > p {
-  @apply my-2; /* Keep this, likely fine */
+  /* @apply my-2; */
 }
 
 .step > h3 {
-  @apply my-0; /* Keep this, likely fine */
+  /* @apply my-0; */
 }
 
-/* === Start Typography Plugin Related - Comment out === */
+/* === Start Typography Plugin Related - Already Commented === */
 /*
 .prose .tweet a {
   text-decoration: inherit;
@@ -248,7 +246,7 @@ table {
   white-space: nowrap;
 }
 
-/* === Start Typography Plugin Related - Comment out === */
+/* === Start Typography Plugin Related - Already Commented === */
 /*
 .prose .callout > p {
   margin: 0 !important;
